@@ -4,7 +4,7 @@
 
 Not a Fishing Mod.
 
-<img width="256" height="256" alt="icon" src="https://github.com/user-attachments/assets/5ef82d57-71ac-4e79-b52e-6b9b0e2ffe20" />
+<img width="256" height="256" alt="icon" src="https://github.com/user-attachments/assets/c1d84333-2324-4d11-a6f2-ff6975fb7c37" />
 
 ---
 
