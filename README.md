@@ -8,10 +8,7 @@ Not a Fishing Mod.
 
 ---
 
-![Lines of Code](https://img.shields.io/endpoint?url=https://ghloc.vercel.app/api/kuko010/EveryFisch/badge)
-![Last Commit](https://img.shields.io/github/last-commit/kuko010/EveryFisch)
-![License](https://img.shields.io/badge/License-MIT-blue.svg)
-[![Repo Health](https://api.gitscope.dev/api/badges/kuko010/EveryFisch/health.svg)](https://gitscope.dev)
+![Lines of code](https://raw.githubusercontent.com/kuko010/EveryFisch/badges/lines-badge.svg)
 
 ## License
 [MIT](LICENSE)
