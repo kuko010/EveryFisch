@@ -1,0 +1,28 @@
+name: Generate Lines Badge
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate badge
+        uses: alexispurslane/GHA-LoC-Badge@2.0.0
+        with:
+          directory: ./
+          badge: ./lines-badge.svg
+          patterns: '*.java|*.kt'
+          ignore: 'build|.gradle'
+
+      - name: Deploy to badges branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          publish_branch: badges
+          destination_dir: ./
+          keep_files: false
