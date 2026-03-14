@@ -12,15 +12,21 @@ modSettings {
         darkBackground = true
         musicVolume = 0.0
     }
+
 }
 
-if (mod.isForge && mod.minecraftVersion == "1.20.1") {
+if (mod.isForge) {
     afterEvaluate {
         // Use findByName to avoid the crash if the task is missing
         tasks.findByName("net.fabricmc.devlaunchinjector.Main.main()")?.let { fabricTask ->
             fabricTask.dependsOn(tasks.named("generatePackMCMetaJson"))
         }
     }
+}
+
+java {
+    withSourcesJar()
+ //   withJavadocJar()
 }
 
 // Example of overriding publishing settings

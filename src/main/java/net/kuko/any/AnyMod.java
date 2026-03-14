@@ -11,18 +11,18 @@ import net.kuko.any.registry.ModItems;
 
 /*? if forge {*/
 
-import net.minecraftforge.eventbus.api.IEventBus;
+/*import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModContainer;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-/*?}*/
+*//*?}*/
 
 /*? if neoforge {*/
-/*import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.ModContainer;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
-*//*?}*/
+/*?}*/
 //endregion
 
 /*? if forgeLike {*/  @Mod(MOD_ID)  /*?}*/
@@ -32,12 +32,12 @@ public class AnyMod  /*? if fabric {*/  /*implements ModInitializer  *//*?}*/ {
 
     /*? if forgeLike {*/
     public AnyMod(/*? if neoforge {*/
-             /*IEventBus modEventBus, ModContainer modContainer
-                  *//*?}*/) {
+             IEventBus modEventBus, ModContainer modContainer
+                  /*?}*/) {
         /*? if forge {*/
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        /*IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModContainer modContainer = ModLoadingContext.get().getActiveContainer();
-        /*?}*/
+        *//*?}*/
         ModItems.register(modEventBus);
 
     }/*?}*/
