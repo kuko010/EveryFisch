@@ -32,7 +32,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
  * </p>
  */
 @SuppressWarnings({"deprecation", "rawtypes", "unchecked"})
-public interface ModItems { // This is abuse of interface.
+public class ModItems {
     /*? if neoforge*/
     //DeferredRegister.Items ITEMS = DeferredRegister.createItems(AnyMod.MOD_ID);
     /*? if forge*/
