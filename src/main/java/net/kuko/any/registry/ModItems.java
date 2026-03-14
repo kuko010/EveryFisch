@@ -38,8 +38,9 @@ public class ModItems {
     /*? if forge*/
     //DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, AnyMod.MOD_ID);
 
-    /*? if forge {*//*RegistryObject<Item>*//*?} elif neoforge {*/ /*DeferredItem<Item>*//*?} else {*/ Item/*?}*/
-        ITEM = item("item", () -> new Item(new Item.Properties()));
+
+    public static final /*? if forge {*//*RegistryObject<Item>*//*?} elif neoforge {*/ /*DeferredItem<Item>*//*?} else {*/Item/*?}*/
+        UNUSED = item("unused", () -> new Item(new Item.Properties()));
 
 
 
@@ -87,7 +88,7 @@ public class ModItems {
          *//*?}*/
     }
 
-    static void register(/*? if forgeLike {*/ /*IEventBus bus *//*?}*/) {
+    public static void register(/*? if forgeLike {*/ /*IEventBus bus *//*?}*/) {
         /*? if forgeLike {*/
         /*ITEMS.register(bus); *//*?}*/
     }
