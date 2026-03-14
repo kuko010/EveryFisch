@@ -25,11 +25,11 @@ stonecutter {
             for (it in loaders) version("$version-$it", version)
         }
 
-        mc("1.21.4", "fabric", "neoforge")
+        mc("1.21.1", "fabric", "neoforge")
 
-        vcsVersion = "1.21.4-fabric"
+        vcsVersion = "1.21.1-fabric"
     }
     create(rootProject)
 }
 
-rootProject.name = "YourModName"
+rootProject.name = "EveryFisch"
