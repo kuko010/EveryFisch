@@ -124,11 +124,11 @@ else
 fi
 
 ###############################################################################
-# 8. Rename ExampleMod class --------------------------------------------------
+# 8. Rename ExampleMode class --------------------------------------------------
 ###############################################################################
 CLASS_NAME=$(echo "$MOD_ID" | sed -E 's/[-_ ]+/ /g' | awk '{for(i=1;i<=NF;i++){printf toupper(substr($i,1,1)) substr($i,2)}}')
 
-find src/main/java -type f \( -name 'ExampleMod.java' -o -name 'ExampleMod.kt' \) | while read -r FILE; do
+find src/main/java -type f \( -name 'ExampleMode.java' -o -name 'ExampleMode.kt' \) | while read -r FILE; do
   EXT="${FILE##*.}"
   DIR=$(dirname "$FILE")
   NEW_FILE="$DIR/${CLASS_NAME}.${EXT}"
@@ -137,7 +137,7 @@ find src/main/java -type f \( -name 'ExampleMod.java' -o -name 'ExampleMod.kt' \
   git mv "$FILE" "$NEW_FILE" 2>/dev/null || mv "$FILE" "$NEW_FILE"
   # package line
   sed -i "1s/^package .*/package $GROUP;/" "$NEW_FILE"
-  # Replace all occurrences of ExampleMod class name with the new class name
+  # Replace all occurrences of ExampleMode class name with the new class name
   sed -i "s/ExampleMod/$CLASS_NAME/g" "$NEW_FILE"
   # Replace mod ID in @Mod annotation
   sed -i "s/\"examplemod\"/\"$MOD_ID\"/g" "$NEW_FILE"
