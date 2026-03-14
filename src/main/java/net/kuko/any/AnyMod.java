@@ -19,8 +19,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 *//*?}*/
 
 /*? if neoforge {*/
-/*
-import net.neoforged.fml.ModContainer;
+
+/*import net.neoforged.fml.ModContainer;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 *//*?}*/
@@ -42,10 +42,10 @@ public class AnyMod  /*? if fabric {*/  implements ModInitializer  /*?}*/ {
 
     public static ResourceLocation id(String path) {
         /*? if >=1.21 {*/
-        /*return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
-        *//*?} else {*/
-        return new ResourceLocation(MOD_ID, path);
-        /*?}*/
+        return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
+        /*?} else {*/
+        /*return new ResourceLocation(MOD_ID, path);
+        *//*?}*/
     }
 
 

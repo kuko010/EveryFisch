@@ -21,20 +21,11 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 *//*?}*/
 
-/**
- * <p>
- * The <code>/^? if CONSTANT {^/ ... /^?}^/</code> blocks are used by Stonecutter
- * to generate loader-specific code.
- * </p>
- * <p>
- * <b>Note:</b> <code>/^</code> and <code>^/</code> are identical to <code>/star</code> and <code>star/</code>,
- * but allow nesting of conditional blocks for Stonecutter.
- * </p>
- */
+
 @SuppressWarnings({"deprecation", "rawtypes", "unchecked"})
 public class ModItems {
     /*? if neoforge*/
-    //DeferredRegister.Items ITEMS = DeferredRegister.createItems(AnyMod.MOD_ID);
+    //static DeferredRegister.Items ITEMS = DeferredRegister.createItems(AnyMod.MOD_ID);
     /*? if forge*/
     //DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, AnyMod.MOD_ID);
 
