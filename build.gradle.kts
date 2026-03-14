@@ -14,6 +14,14 @@ modSettings {
     }
 }
 
+if (mod.isForge && mod.minecraftVersion == "1.20.1") {
+    afterEvaluate {
+        // Use findByName to avoid the crash if the task is missing
+        tasks.findByName("net.fabricmc.devlaunchinjector.Main.main()")?.let { fabricTask ->
+            fabricTask.dependsOn(tasks.named("generatePackMCMetaJson"))
+        }
+    }
+}
 
 // Example of overriding publishing settings
 publishMods {

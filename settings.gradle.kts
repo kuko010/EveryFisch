@@ -19,6 +19,8 @@ plugins {
 stonecutter {
     centralScript = "build.gradle.kts"
     kotlinController = true
+
+
     shared {
         fun mc(version: String, vararg loaders: String) {
             // Make the relevant version directories named "1.20.2-fabric", "1.20.2-forge", etc.
@@ -26,8 +28,9 @@ stonecutter {
         }
 
         mc("1.21.1", "fabric", "neoforge")
+        mc("1.20.1", "fabric", "forge")
 
-        vcsVersion = "1.21.1-fabric"
+        vcsVersion = "1.20.1-fabric"
     }
     create(rootProject)
 }
